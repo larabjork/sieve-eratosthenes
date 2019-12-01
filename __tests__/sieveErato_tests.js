@@ -4,6 +4,6 @@ describe ('Sieve', () => {
 
   test('should create an array starting with 2 and ending with number entered by user', () => {
     const newArray = new Sieve(15);
-    expect(newArray.createArray).isArray(true);
+    expect(newArray.createArray(15)).toEqual([2,3,4,5,6,7,8,9,10,11,12,13,14,15]);
   });
 });
