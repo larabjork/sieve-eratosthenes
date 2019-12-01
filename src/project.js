@@ -3,6 +3,7 @@ export class Sieve {
     this.num = num;
     this.primeArray = [];
     this.initialArray= [];
+    this.discardArray = [];
   }
 
   createArray() {
@@ -10,15 +11,18 @@ export class Sieve {
       this.initialArray.push(i);
     };
     return this.initialArray;
-  }
+  };
 
-  removeNonprime() {
-    this.initialArray.forEach(function(num){
-      if (num % 2 !==0) {
-        this.primeArray.push(num);
-      } else {};
+  removeEvens() {
+    this.initialArray.forEach(function(j){
+      if (j === 2) {
+        this.primeArray.push(j);
+      return this.primeArray;
+      } else if (j % 2 === 0){
+        this.discardArray.push(j);
+      } else {}
     });
-  }
+  };
 
 
 
