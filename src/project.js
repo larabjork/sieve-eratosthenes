@@ -12,5 +12,15 @@ export class Sieve {
     return this.initialArray;
   }
 
+  removeNonprime() {
+    this.initialArray.forEach(function(num){
+      if (num % 2 !==0) {
+        this.primeArray.push(num);
+      } else {};
+    });
+  }
+
+
+
 
 }
