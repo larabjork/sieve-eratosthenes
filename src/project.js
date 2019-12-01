@@ -6,11 +6,10 @@ export class Sieve {
   }
 
   createArray() {
-    for (let i = 2; i <=num; i+= 1) {
+    for (let i = 2; i <=this.num; i+= 1) {
       this.initialArray.push(i);
-      let numArray = this.initialArray;
-      return numArray;
     };
+    return this.initialArray;
   }
 
 
